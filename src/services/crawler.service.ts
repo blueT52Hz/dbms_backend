@@ -16,13 +16,14 @@ export class CrawlerService {
         '--no-sandbox',
         '--disable-setuid-sandbox',
         '--disable-dev-shm-usage',
+        '--single-process',
+        '--disable-gpu',
         '--disable-accelerated-2d-canvas',
         '--no-first-run',
-        '--no-zygote',
-        '--single-process',
-        '--disable-gpu'
+        '--no-zygote'
       ],
-      headless: true
+      headless: true,
+      timeout: 60000
     })
   }
 
