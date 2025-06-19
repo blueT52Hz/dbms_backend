@@ -12,7 +12,7 @@ export class CrawlerService {
 
   private async initBrowser() {
     this.browser = await puppeteer.launch({
-      executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/chromium',
+      executablePath: 'chrome.exe',
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
