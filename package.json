@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx nodemon",
-    "render-build": "bash render-build.sh",
     "build": "rimraf ./dist && tsc --noCheck && tsc-alias",
     "start": "node dist/index.js",
+    "start:production": "NODE_ENV=production node dist/index.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --check .",
-    "prettier:fix": "prettier --write ."
+    "prettier:fix": "prettier --write .",
+    "postinstall": "npm run build",
+    "railway:build": "npm install && npm run build",
+    "railway:start": "npm run start:production"
   },
   "repository": {
     "type": "git",

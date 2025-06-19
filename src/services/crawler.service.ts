@@ -16,14 +16,13 @@ export class CrawlerService {
         '--no-sandbox',
         '--disable-setuid-sandbox',
         '--disable-dev-shm-usage',
-        '--single-process',
-        '--disable-gpu',
         '--disable-accelerated-2d-canvas',
         '--no-first-run',
-        '--no-zygote'
+        '--no-zygote',
+        '--single-process',
+        '--disable-gpu'
       ],
-      headless: true,
-      timeout: 60000
+      executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined // Sử dụng Chromium mặc định nếu không có biến môi trường
     })
   }
 
