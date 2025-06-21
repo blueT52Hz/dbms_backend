@@ -1,4 +1,4 @@
-import { CityResponseDto } from '~/dtos/response/cityResponseDto'
+import { CityResponseDto } from '~/types/response/cityResponseDto'
 
 export interface ICityRepository {
   findCityByName(cityName: string): Promise<CityResponseDto | null>

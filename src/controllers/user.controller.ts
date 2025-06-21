@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import userService, { UserService } from '~/services/user.service'
 import HTTP_STATUS from '~/constants/httpStatus.constant'
-import { getUserByIdSchema } from '~/dtos/request/user.dto'
+import { getUserByIdSchema } from '~/types/request/user.dto'
 
 class UserController {
   constructor(private userService: UserService) {

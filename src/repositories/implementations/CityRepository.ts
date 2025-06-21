@@ -1,8 +1,8 @@
 import prisma from '~/config/prisma'
 import { PrismaClient } from '@prisma/client'
 import { ICityRepository } from '../interfaces/ICityRepository'
-import { cityResponseSchema } from '~/dtos/response/cityResponseDto'
-import { CityResponseDto } from '~/dtos/response/cityResponseDto'
+import { cityResponseSchema } from '~/types/response/cityResponseDto'
+import { CityResponseDto } from '~/types/response/cityResponseDto'
 
 class CityRepository implements ICityRepository {
   constructor(private prisma: PrismaClient) {}

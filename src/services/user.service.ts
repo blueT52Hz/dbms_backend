@@ -1,6 +1,6 @@
 import { userRepository, IUserRepository } from '~/repositories/index.repository'
-import { CreateUserDto } from '~/dtos/request/user.dto'
-import { UserResponseDto } from '~/dtos/response/user.dto'
+import { CreateUserDto } from '~/types/request/user.dto'
+import { UserResponseDto } from '~/types/response/user.dto'
 import { AppError } from '~/middlewares/errorHandler.middleware'
 import HTTP_STATUS from '~/constants/httpStatus.constant'
 import { USER_MESSAGE } from '~/constants/message.constant'

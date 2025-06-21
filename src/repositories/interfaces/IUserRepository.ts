@@ -1,5 +1,5 @@
-import { CreateUserDto } from '~/dtos/request/user.dto'
-import { UserResponseDto } from '~/dtos/response/user.dto'
+import { CreateUserDto } from '~/types/request/user.dto'
+import { UserResponseDto } from '~/types/response/user.dto'
 
 export interface IUserRepository {
   findUserByEmail(email: string): Promise<UserResponseDto | null>

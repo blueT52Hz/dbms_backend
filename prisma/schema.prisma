@@ -41,16 +41,16 @@ model WeatherHistory {
   weather_id      String      @id @default(uuid())
   city_id         String
   city            City        @relation(fields: [city_id], references: [city_id])
-  temp_current    Float
-  temp_min        Float
-  temp_max        Float
-  temp_feels_like Float
-  description     String
-  humidity        Int
-  visibility      Int
-  wind_speed      Float
-  rain_amount     Float
-  uv              Float
+  temp_current    Float // Nhiệt độ hiện tại
+  temp_min        Float // Nhiệt độ tối thiểu
+  temp_max        Float // Nhiệt độ tối đa
+  temp_feels_like Float // Nhiệt độ cảm nhận
+  description     String // Mô tả thời tiết
+  humidity        Int // Độ ẩm
+  visibility      Int // Tầm nhìn
+  wind_speed      Float // Tốc độ gió
+  rain_amount     Float // Lượng mưa
+  uv              Float // Tia cực tím
   created_at      DateTime    @default(now())
   updated_at      DateTime    @updatedAt
   air_quality     AirQuality?

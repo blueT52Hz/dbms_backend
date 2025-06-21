@@ -50,7 +50,7 @@ const corsOptions = {
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 phút
-  max: 100, // 100 request/IP trong 15 phút
+  max: 10000, // 100 request/IP trong 15 phút
   message: 'Quá nhiều request từ IP này, vui lòng thử lại sau 15 phút',
   standardHeaders: true, // Trả về header `RateLimit-*`
   legacyHeaders: false // Tắt header `X-RateLimit-*` cũ
@@ -62,8 +62,9 @@ const configApp = (app: Application) => {
   app.use(cookieParser())
   app.use(express.json()) // Parse JSON bodies
   app.use(cors(corsOptions)) // Cho phép CORS
-  app.use(limiter) // Giới hạn số lượng request tránh DDOS
-
+  if (env.NODE_ENV === 'production') {
+    app.use(limiter)
+  }
   app.use('/api/v1', indexRoute)
   // Xử lý lỗi 404
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

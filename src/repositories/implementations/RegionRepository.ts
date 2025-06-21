@@ -1,8 +1,8 @@
 import prisma from '~/config/prisma'
 import { PrismaClient } from '@prisma/client'
 import { IRegionRepository } from '../interfaces/IRegionRepository'
-import { regionResponseSchema } from '~/dtos/response/regionResponseDto'
-import { RegionResponseDto } from '~/dtos/response/regionResponseDto'
+import { regionResponseSchema } from '~/types/response/regionResponseDto'
+import { RegionResponseDto } from '~/types/response/regionResponseDto'
 
 class RegionRepository implements IRegionRepository {
   constructor(private prisma: PrismaClient) {}

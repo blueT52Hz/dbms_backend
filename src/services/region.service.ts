@@ -1,6 +1,6 @@
 import { IRegionRepository } from '~/repositories/interfaces/IRegionRepository'
 import regionRepository from '~/repositories/implementations/RegionRepository'
-import { RegionResponseDto } from '~/dtos/response/regionResponseDto'
+import { RegionResponseDto } from '~/types/response/regionResponseDto'
 import HTTP_STATUS from '~/constants/httpStatus.constant'
 import { AppError } from '~/middlewares/errorHandler.middleware'
 

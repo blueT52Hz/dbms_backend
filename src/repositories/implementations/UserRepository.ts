@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client'
 import { IUserRepository } from '~/repositories/interfaces/IUserRepository'
-import { CreateUserDto } from '~/dtos/request/user.dto'
-import { UserResponseDto, userResponseSchema } from '~/dtos/response/user.dto'
+import { CreateUserDto } from '~/types/request/user.dto'
+import { UserResponseDto, userResponseSchema } from '~/types/response/user.dto'
 import prisma from '~/config/prisma'
 
 class UserRepository implements IUserRepository {

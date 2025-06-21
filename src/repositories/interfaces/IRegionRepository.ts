@@ -1,4 +1,4 @@
-import { RegionResponseDto } from '~/dtos/response/regionResponseDto'
+import { RegionResponseDto } from '~/types/response/regionResponseDto'
 
 export interface IRegionRepository {
   findRegionByRegionId(regionId: string): Promise<RegionResponseDto | null>
