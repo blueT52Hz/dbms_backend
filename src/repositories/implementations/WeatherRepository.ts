@@ -159,6 +159,7 @@ class WeatherRepository implements IWeatherRepository {
       on ct.city_id = wh.city_id
       join air_qualities aq 
       on aq.weather_id = wh.weather_id
+      where ct_city_id = "f44daa1c-ef46-43ab-b55c-cb91febf0c53"
       group by to_char(wh.created_at, 'DD-MM-YYYY'), ct.city_name
       order by ct.city_name
     `
